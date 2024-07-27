@@ -21,7 +21,7 @@ function Comp() {
 
         let from = fromCntry.toLowerCase();
         let to = toCntry.toLowerCase();
-        let api_url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${from}.json`
+        let api_url = `${import.meta.env.VITE_CURRENCY_API}/${from}.json`  // for vite app
 
         let res = await fetch(api_url);
         let data = await res.json();
